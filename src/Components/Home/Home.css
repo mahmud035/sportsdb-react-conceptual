@@ -1,6 +1,7 @@
 .home-container {
   display: grid;
   grid-template-columns: 3fr 2fr;
+  color: #112b3c;
 }
 
 .players-container h1,
@@ -26,4 +27,5 @@
   background-color: #112b3c;
   color: #fff;
   letter-spacing: 1px;
+  border: none;
 }
