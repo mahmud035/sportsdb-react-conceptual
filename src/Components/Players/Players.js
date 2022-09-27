@@ -1,10 +1,13 @@
 import React from 'react';
+import SinglePlayer from '../SinglePlayer/SinglePlayer';
 import './Players.css';
 
-const Players = () => {
+const Players = ({ players }) => {
   return (
-    <div>
-      <h1>Players</h1>
+    <div className="card-container">
+      {players.map((player, index) => (
+        <SinglePlayer key={index} player={player}></SinglePlayer>
+      ))}
     </div>
   );
 };

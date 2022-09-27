@@ -4,8 +4,8 @@
   color: #112b3c;
 }
 
-.players-container h1,
-.single-player-container h1 {
+.left-side h1,
+.right-side h1 {
   text-align: center;
 }
 

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Players from '../Players/Players';
 import './Home.css';
 
 const Home = () => {
@@ -13,11 +14,9 @@ const Home = () => {
       .then((data) => setPlayers(data?.player));
   }, [search]);
 
-  console.log(players);
-
   return (
     <div className="home-container">
-      <div className="players-container">
+      <div className="left-side">
         <h1>All Players</h1>
         <div className="search-area">
           <input
@@ -28,8 +27,10 @@ const Home = () => {
           &nbsp;
           <button className="search-btn">Search</button>
         </div>
+
+        <Players players={players}></Players>
       </div>
-      <div className="single-player-container">
+      <div className="right-side">
         <h1>Cart</h1>
       </div>
     </div>

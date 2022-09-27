@@ -1,10 +1,21 @@
 import React from 'react';
 import './SinglePlayer.css';
 
-const SinglePlayer = () => {
+const SinglePlayer = ({ player }) => {
+  console.log(player);
+  const { strDescriptionEN = 'Not Available', strThumb, strPlayer } = player;
   return (
-    <div>
-      <h1>Single Player</h1>
+    <div className="card">
+      <img src={strThumb} alt="" />
+      <div className="card-body">
+        <h3>Name: {strPlayer}</h3>
+
+        <p>
+          {strDescriptionEN
+            ? strDescriptionEN.slice(0, 60)
+            : 'No description available'}
+        </p>
+      </div>
     </div>
   );
 };
