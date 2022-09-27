@@ -3,7 +3,17 @@ import './Home.css';
 
 const Home = () => {
   const [search, setSearch] = useState('');
-  console.log(search);
+  const [players, setPlayers] = useState([]);
+
+  useEffect(() => {
+    fetch(
+      `https://www.thesportsdb.com/api/v1/json/2/searchplayers.php?p=${search}`
+    )
+      .then((res) => res.json())
+      .then((data) => setPlayers(data?.player));
+  }, [search]);
+
+  console.log(players);
 
   return (
     <div className="home-container">
