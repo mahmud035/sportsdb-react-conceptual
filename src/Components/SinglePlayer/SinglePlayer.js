@@ -15,6 +15,11 @@ const SinglePlayer = ({ player }) => {
             ? strDescriptionEN.slice(0, 60)
             : 'No description available'}
         </p>
+        <div className="btn-container">
+          <button className="btn-details">Details</button>
+          <button className="btn-add-to-cart">Add to Cart</button>
+          <button className="btn-bookmark">Bookmark</button>
+        </div>
       </div>
     </div>
   );
